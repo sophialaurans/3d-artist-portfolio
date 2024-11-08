@@ -1,37 +1,40 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <title>3D Artist - Marcos Paulo Coelho</title>
-    <meta name="description" content="Portfolio of Marcos Paulo Coelho, a 3D artist and CGI illustrator experienced in concept art, environment design, and architectural visualization (archviz)."/>
-    <meta name="keywords" content="3D artist, CGI illustrator, environment designer, portfolio, digital art, 3d modeling, concept art, architectural visualization"/>
-    <meta name="author" content="Marcos Paulo Coelho"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <link rel="stylesheet" href="style.css"/>
+    <meta charset="utf-8">
+    <meta name="description" content="Portfolio of Marcos Paulo Coelho, a 3D artist and CGI illustrator experienced in concept art, environment design, and architectural visualization (archviz).">
+    <meta name="keywords" content="3D artist, CGI illustrator, environment designer, portfolio, digital art, 3d modeling, concept art, architectural visualization">
+    <meta name="author" content="Marcos Paulo Coelho">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="script.js" defer></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 </head>
 <body>
     <header class="initial">
         <div class="carousel">
-            <img src="img/projects/midnight-fuel/1.jpg" alt="">
-            <img src="img/projects/that-time-of-the-year/1.jpg" alt="">
-            <img src="img/projects/mystical-lake/1.jpg" alt="">
-            <img src="img/projects/neon-heist/1.jpg" alt="">
-            <img src="img/projects/the-way-out/2.jpg" alt="">
-            <img src="img/projects/palace-pool/1.jpg" alt="">
-            <img src="img/projects/roman-ruins/1.jpg" alt="">
-            <img src="img/projects/dodge-charger-1969/1.jpg" alt="">
-            <img src="img/projects/kosaten-japanese-bridge/1.jpg" alt="">
-            <img src="img/projects/the-last-sunset/1.jpg" alt="">
-            <img src="img/projects/misty-cabin/1.jpg" alt="">
-            <img src="img/projects/chess-is-an-art-form/2.jpg" alt="">
-            <img src="img/projects/midnight-payphone/1.jpg" alt="">
-            <img src="img/projects/filmic-interior-closeups/2.jpg" alt="">
-            <img src="img/projects/sunshine-canyon-house/1.jpg" alt="">
-            <img src="img/projects/classic-living/1.jpg" alt="">
-            <img src="img/projects/the-underground-temple/1.jpg" alt="">
+            <img src="img/projects/midnight-fuel/high/1.jpg" alt="">
+            <img src="img/projects/that-time-of-the-year/high/1.jpg" alt="">
+            <img src="img/projects/mystical-lake/high/1.jpg" alt="">
+            <img src="img/projects/neon-heist/high/1.jpg" alt="">
+            <img src="img/projects/the-way-out/high/2.jpg" alt="">
+            <img src="img/projects/palace-pool/high/1.jpg" alt="">
+            <img src="img/projects/roman-ruins/high/1.jpg" alt="">
+            <img src="img/projects/dodge-charger-1969/high/1.jpg" alt="">
+            <img src="img/projects/kosaten-japanese-bridge/high/1.jpg" alt="">
+            <img src="img/projects/the-last-sunset/high/1.jpg" alt="">
+            <img src="img/projects/misty-cabin/high/1.jpg" alt="">
+            <img src="img/projects/chess-is-an-art-form/high/2.jpg" alt="">
+            <img src="img/projects/midnight-payphone/high/1.jpg" alt="">
+            <img src="img/projects/filmic-interior-closeups/high/2.jpg" alt="">
+            <img src="img/projects/sunshine-canyon-house/high/1.jpg" alt="">
+            <img src="img/projects/classic-living/high/1.jpg" alt="">
+            <img src="img/projects/the-underground-temple/high/1.jpg" alt="">
         </div>
         <div class="name">
+            <img src="img/header/logo-mp.png" alt="">
             <h1>Marcos Paulo Coelho</h1>
             <p>3D Artist, Architect, CGI Illustrator, Environment Designer</p>
             <div class="social-media">
@@ -43,22 +46,20 @@
         </div>
         <div class="header-arrows">
             <a href="#navbar">
-                <img src="img/arrow.png">
+                <img src="img/arrow.png" alt="">
             </a>
         </div>
     </header>
-    <div class="beginning">
-        <hr class="line"/>
-    </div>
+    <hr class="line">
     <nav class="navbar" id="navbar">
         <ul>
             <a href="#portfolio">
                 <li>PORTFOLIO</li>
             </a>
-            <a href="#about">
+            <a href="#about-section">
                 <li>ABOUT</li>
             </a>
-            <a href="#contact">
+            <a href="#contact-section">
                 <li>CONTACT</li>
             </a>
         </ul>
@@ -72,489 +73,497 @@
         </div>
         <section class="portfolio-section" id="portfolio-section">
             <article id="gallery" class="gallery">
+                <div class="grid-column">
                     <div class="gallery-img-container">
-                        <img src="img/projects/that-time-of-the-year/1.jpg" loading="lazy" alt="" data-link="https://mpfcoelho.artstation.com/projects/KeZQB9" onclick="openModalMainImage(this.parentElement)">
+                        <img src="img/projects/that-time-of-the-year/low/1.jpg" data-full="img/projects/that-time-of-the-year/high/1.jpg" loading="lazy" alt="" data-link="https://mpfcoelho.artstation.com/projects/KeZQB9" onclick="openModalMainImage(this.parentElement)">
                     </div>
                     <div class="gallery-img-container">
-                        <img src="img/projects/mystical-lake/1.jpg" loading="lazy" alt="" data-link="https://mpfcoelho.artstation.com/projects/Za9mnx" onclick="openModalMainImage(this.parentElement)">
+                        <img src="img/projects/mystical-lake/low/1.jpg" data-full="img/projects/mystical-lake/high/1.jpg" loading="lazy" alt="" data-link="https://mpfcoelho.artstation.com/projects/Za9mnx" onclick="openModalMainImage(this.parentElement)">
                     </div>
                     <div class="gallery-img-container">
-                        <img src="img/projects/midnight-fuel/1.jpg" loading="lazy" alt="" data-link="https://mpfcoelho.artstation.com/projects/Xg9dLl" onclick="openModalMainImage(this.parentElement)">
+                        <img src="img/projects/midnight-fuel/low/1.jpg" data-full="img/projects/midnight-fuel/high/1.jpg" loading="lazy" alt="" data-link="https://mpfcoelho.artstation.com/projects/Xg9dLl" onclick="openModalMainImage(this.parentElement)">
                     </div>
                     <div class="gallery-img-container">
-                        <img src="img/projects/midnight-fuel/2.jpg" loading="lazy" alt="" data-link="https://mpfcoelho.artstation.com/projects/Xg9dLl" onclick="openModalMainImage(this.parentElement)">
+                        <img src="img/projects/midnight-fuel/low/2.jpg" data-full="img/projects/midnight-fuel/high/2.jpg" loading="lazy" alt="" data-link="https://mpfcoelho.artstation.com/projects/Xg9dLl" onclick="openModalMainImage(this.parentElement)">
                     </div>
                     <div class="gallery-img-container">
-                        <img src="img/projects/midnight-fuel/3.jpg" loading="lazy" alt="" data-link="https://mpfcoelho.artstation.com/projects/Xg9dLl" onclick="openModalMainImage(this.parentElement)">
+                        <img src="img/projects/midnight-fuel/low/3.jpg" data-full="img/projects/midnight-fuel/high/3.jpg" loading="lazy" alt="" data-link="https://mpfcoelho.artstation.com/projects/Xg9dLl" onclick="openModalMainImage(this.parentElement)">
                     </div>
                     <div class="gallery-img-container">
-                        <img src="img/projects/midnight-fuel/4.jpg" loading="lazy" alt="" data-link="https://mpfcoelho.artstation.com/projects/Xg9dLl" onclick="openModalMainImage(this.parentElement)">
+                        <img src="img/projects/midnight-fuel/low/4.jpg" data-full="img/projects/midnight-fuel/high/4.jpg" loading="lazy" alt="" data-link="https://mpfcoelho.artstation.com/projects/Xg9dLl" onclick="openModalMainImage(this.parentElement)">
                     </div>
                     <div class="gallery-img-container">
-                        <img src="img/projects/midnight-fuel/5.jpg" loading="lazy" alt="" data-link="https://mpfcoelho.artstation.com/projects/Xg9dLl" onclick="openModalMainImage(this.parentElement)">
+                        <img src="img/projects/midnight-fuel/low/5.jpg" data-full="img/projects/midnight-fuel/high/5.jpg" loading="lazy" alt="" data-link="https://mpfcoelho.artstation.com/projects/Xg9dLl" onclick="openModalMainImage(this.parentElement)">
                     </div>
                     <div class="gallery-img-container">
-                        <img src="img/projects/midnight-fuel/6.jpg" loading="lazy" alt="" data-link="https://mpfcoelho.artstation.com/projects/Xg9dLl" onclick="openModalMainImage(this.parentElement)">
+                        <img src="img/projects/midnight-fuel/low/6.jpg" data-full="img/projects/midnight-fuel/high/6.jpg" loading="lazy" alt="" data-link="https://mpfcoelho.artstation.com/projects/Xg9dLl" onclick="openModalMainImage(this.parentElement)">
                     </div>
                     <div class="gallery-img-container">
-                        <img src="img/projects/midnight-fuel/7.jpg" loading="lazy" alt="" data-link="https://mpfcoelho.artstation.com/projects/Xg9dLl" onclick="openModalMainImage(this.parentElement)">
+                        <img src="img/projects/midnight-fuel/low/7.jpg" data-full="img/projects/midnight-fuel/high/7.jpg" loading="lazy" alt="" data-link="https://mpfcoelho.artstation.com/projects/Xg9dLl" onclick="openModalMainImage(this.parentElement)">
                     </div>
                     <div class="gallery-img-container">
-                        <img src="img/projects/midnight-fuel/8.jpg" loading="lazy" alt="" data-link="https://mpfcoelho.artstation.com/projects/Xg9dLl" onclick="openModalMainImage(this.parentElement)">
+                        <img src="img/projects/midnight-fuel/low/8.jpg" data-full="img/projects/midnight-fuel/high/8.jpg" loading="lazy" alt="" data-link="https://mpfcoelho.artstation.com/projects/Xg9dLl" onclick="openModalMainImage(this.parentElement)">
                     </div>
                     <div class="gallery-img-container">
-                        <img src="img/projects/neon-heist/1.jpg" loading="lazy" alt="" data-link="https://mpfcoelho.artstation.com/projects/lDawoa" onclick="openModalMainImage(this.parentElement)">
+                        <img src="img/projects/neon-heist/low/1.jpg" data-full="img/projects/neon-heist/high/1.jpg" loading="lazy" alt="" data-link="https://mpfcoelho.artstation.com/projects/lDawoa" onclick="openModalMainImage(this.parentElement)">
+                    </div>
+                </div>
+                <div class="grid-column">
+                    <div class="gallery-img-container">
+                        <img src="img/projects/neon-heist/low/4.jpg" data-full="img/projects/neon-heist/high/4.jpg" loading="lazy" alt="" data-link="https://mpfcoelho.artstation.com/projects/lDawoa" onclick="openModalMainImage(this.parentElement)">
                     </div>
                     <div class="gallery-img-container">
-                        <img src="img/projects/neon-heist/4.jpg" loading="lazy" alt="" data-link="https://mpfcoelho.artstation.com/projects/lDawoa" onclick="openModalMainImage(this.parentElement)">
+                        <img src="img/projects/the-way-out/low/1.gif" data-full="img/projects/the-way-out/high/1.gif" loading="lazy" alt="" data-link="https://mpfcoelho.artstation.com/projects/03dAe8" onclick="openModalMainImage(this.parentElement)">
                     </div>
                     <div class="gallery-img-container">
-                        <img src="img/projects/the-way-out/1.gif" loading="lazy" alt="" data-link="https://mpfcoelho.artstation.com/projects/03dAe8" onclick="openModalMainImage(this.parentElement)">
+                        <img src="img/projects/the-way-out/low/2.jpg" data-full="img/projects/the-way-out/high/2.jpg" loading="lazy" alt="" data-link="https://mpfcoelho.artstation.com/projects/03dAe8" onclick="openModalMainImage(this.parentElement)">
                     </div>
                     <div class="gallery-img-container">
-                        <img src="img/projects/the-way-out/2.jpg" loading="lazy" alt="" data-link="https://mpfcoelho.artstation.com/projects/03dAe8" onclick="openModalMainImage(this.parentElement)">
+                        <img src="img/projects/palace-pool/low/1.jpg" data-full="img/projects/palace-pool/high/1.jpg" loading="lazy" alt="" data-link="https://mpfcoelho.artstation.com/projects/kl95Jd" onclick="openModalMainImage(this.parentElement)">
                     </div>
                     <div class="gallery-img-container">
-                        <img src="img/projects/palace-pool/1.jpg" loading="lazy" alt="" data-link="https://mpfcoelho.artstation.com/projects/kl95Jd" onclick="openModalMainImage(this.parentElement)">
+                        <img src="img/projects/roman-ruins/low/1.jpg" data-full="img/projects/roman-ruins/high/1.jpg" loading="lazy" alt="" data-link="https://mpfcoelho.artstation.com/projects/Wm8V52" onclick="openModalMainImage(this.parentElement)">
                     </div>
                     <div class="gallery-img-container">
-                        <img src="img/projects/roman-ruins/1.jpg" loading="lazy" alt="" data-link="https://mpfcoelho.artstation.com/projects/Wm8V52" onclick="openModalMainImage(this.parentElement)">
+                        <img src="img/projects/roman-ruins/low/4.jpg" data-full="img/projects/roman-ruins/high/4.jpg" loading="lazy" alt="" data-link="https://mpfcoelho.artstation.com/projects/Wm8V52" onclick="openModalMainImage(this.parentElement)">
                     </div>
                     <div class="gallery-img-container">
-                        <img src="img/projects/roman-ruins/4.jpg" loading="lazy" alt="" data-link="https://mpfcoelho.artstation.com/projects/Wm8V52" onclick="openModalMainImage(this.parentElement)">
+                        <img src="img/projects/roman-ruins/low/5.jpg" data-full="img/projects/roman-ruins/high/5.jpg" loading="lazy" alt="" data-link="https://mpfcoelho.artstation.com/projects/Wm8V52" onclick="openModalMainImage(this.parentElement)">
                     </div>
                     <div class="gallery-img-container">
-                        <img src="img/projects/roman-ruins/5.jpg" loading="lazy" alt="" data-link="https://mpfcoelho.artstation.com/projects/Wm8V52" onclick="openModalMainImage(this.parentElement)">
+                        <img src="img/projects/roman-ruins/low/8.jpg" data-full="img/projects/roman-ruins/high/8.jpg" loading="lazy" alt="" data-link="https://mpfcoelho.artstation.com/projects/Wm8V52" onclick="openModalMainImage(this.parentElement)">
                     </div>
                     <div class="gallery-img-container">
-                        <img src="img/projects/roman-ruins/8.jpg" loading="lazy" alt="" data-link="https://mpfcoelho.artstation.com/projects/Wm8V52" onclick="openModalMainImage(this.parentElement)">
+                        <img src="img/projects/dodge-charger-1969/low/1.jpg" data-full="img/projects/dodge-charger-1969/high/1.jpg" loading="lazy" alt="" data-link="https://mpfcoelho.artstation.com/projects/6bB6w5" onclick="openModalMainImage(this.parentElement)">
                     </div>
                     <div class="gallery-img-container">
-                        <img src="img/projects/dodge-charger-1969/1.jpg" loading="lazy" alt="" data-link="https://mpfcoelho.artstation.com/projects/6bB6w5" onclick="openModalMainImage(this.parentElement)">
+                        <img src="img/projects/dodge-charger-1969/low/2.jpg" data-full="img/projects/dodge-charger-1969/high/2.jpg" loading="lazy" alt="" data-link="https://mpfcoelho.artstation.com/projects/6bB6w5" onclick="openModalMainImage(this.parentElement)">
+                    </div>
+                </div>
+                <div class="grid-column">
+                    <div class="gallery-img-container">
+                        <img src="img/projects/dodge-charger-1969/low/3.jpg" data-full="img/projects/dodge-charger-1969/high/3.jpg" loading="lazy" alt="" data-link="https://mpfcoelho.artstation.com/projects/6bB6w5" onclick="openModalMainImage(this.parentElement)">
                     </div>
                     <div class="gallery-img-container">
-                        <img src="img/projects/dodge-charger-1969/2.jpg" loading="lazy" alt="" data-link="https://mpfcoelho.artstation.com/projects/6bB6w5" onclick="openModalMainImage(this.parentElement)">
+                        <img src="img/projects/dodge-charger-1969/low/4.jpg" data-full="img/projects/dodge-charger-1969/high/4.jpg" loading="lazy" alt="" data-link="https://mpfcoelho.artstation.com/projects/6bB6w5" onclick="openModalMainImage(this.parentElement)">
                     </div>
                     <div class="gallery-img-container">
-                        <img src="img/projects/dodge-charger-1969/3.jpg" loading="lazy" alt="" data-link="https://mpfcoelho.artstation.com/projects/6bB6w5" onclick="openModalMainImage(this.parentElement)">
+                        <img src="img/projects/dodge-charger-1969/low/5.jpg" data-full="img/projects/dodge-charger-1969/high/5.jpg" loading="lazy" alt="" data-link="https://mpfcoelho.artstation.com/projects/6bB6w5" onclick="openModalMainImage(this.parentElement)">
                     </div>
                     <div class="gallery-img-container">
-                        <img src="img/projects/dodge-charger-1969/4.jpg" loading="lazy" alt="" data-link="https://mpfcoelho.artstation.com/projects/6bB6w5" onclick="openModalMainImage(this.parentElement)">
+                        <img src="img/projects/dodge-charger-1969/low/6.jpg" data-full="img/projects/dodge-charger-1969/high/6.jpg" loading="lazy" alt="" data-link="https://mpfcoelho.artstation.com/projects/6bB6w5" onclick="openModalMainImage(this.parentElement)">
                     </div>
                     <div class="gallery-img-container">
-                        <img src="img/projects/dodge-charger-1969/5.jpg" loading="lazy" alt="" data-link="https://mpfcoelho.artstation.com/projects/6bB6w5" onclick="openModalMainImage(this.parentElement)">
+                        <img src="img/projects/kosaten-japanese-bridge/low/1.jpg" data-full="img/projects/kosaten-japanese-bridge/high/1.jpg" loading="lazy" alt="" data-link="https://mpfcoelho.artstation.com/projects/yJ6eDR" onclick="openModalMainImage(this.parentElement)">
                     </div>
                     <div class="gallery-img-container">
-                        <img src="img/projects/dodge-charger-1969/6.jpg" loading="lazy" alt="" data-link="https://mpfcoelho.artstation.com/projects/6bB6w5" onclick="openModalMainImage(this.parentElement)">
+                        <img src="img/projects/the-last-sunset/low/1.jpg" data-full="img/projects/the-last-sunset/high/1.jpg" loading="lazy" alt="" data-link="https://mpfcoelho.artstation.com/projects/o2V6gB" onclick="openModalMainImage(this.parentElement)">
                     </div>
                     <div class="gallery-img-container">
-                        <img src="img/projects/kosaten-japanese-bridge/1.jpg" loading="lazy" alt="" data-link="https://mpfcoelho.artstation.com/projects/yJ6eDR" onclick="openModalMainImage(this.parentElement)">
+                        <img src="img/projects/misty-cabin/low/1.jpg" data-full="img/projects/misty-cabin/high/1.jpg" loading="lazy" alt="" data-link="https://mpfcoelho.artstation.com/projects/ZeR4BR" onclick="openModalMainImage(this.parentElement)">
                     </div>
                     <div class="gallery-img-container">
-                        <img src="img/projects/the-last-sunset/1.jpg" loading="lazy" alt="" data-link="https://mpfcoelho.artstation.com/projects/o2V6gB" onclick="openModalMainImage(this.parentElement)">
+                        <img src="img/projects/misty-cabin/low/4.jpg" data-full="img/projects/misty-cabin/high/4.jpg" loading="lazy" alt="" data-link="https://mpfcoelho.artstation.com/projects/ZeR4BR" onclick="openModalMainImage(this.parentElement)">
                     </div>
                     <div class="gallery-img-container">
-                        <img src="img/projects/misty-cabin/1.jpg" loading="lazy" alt="" data-link="https://mpfcoelho.artstation.com/projects/ZeR4BR" onclick="openModalMainImage(this.parentElement)">
+                        <img src="img/projects/misty-cabin/low/5.jpg" data-full="img/projects/misty-cabin/high/5.jpg" loading="lazy" alt="" data-link="https://mpfcoelho.artstation.com/projects/ZeR4BR" onclick="openModalMainImage(this.parentElement)">
                     </div>
                     <div class="gallery-img-container">
-                        <img src="img/projects/misty-cabin/4.jpg" loading="lazy" alt="" data-link="https://mpfcoelho.artstation.com/projects/ZeR4BR" onclick="openModalMainImage(this.parentElement)">
+                        <img src="img/projects/filmic-interior-closeups/low/4.jpg" data-full="img/projects/filmic-interior-closeups/high/4.jpg" loading="lazy" alt="" data-link="https://mpfcoelho.artstation.com/projects/yJnqXJ" onclick="openModalMainImage(this.parentElement)">
                     </div>
                     <div class="gallery-img-container">
-                        <img src="img/projects/misty-cabin/5.jpg" loading="lazy" alt="" data-link="https://mpfcoelho.artstation.com/projects/ZeR4BR" onclick="openModalMainImage(this.parentElement)">
+                        <img src="img/projects/sunshine-canyon-house/low/1.jpg" data-full="img/projects/sunshine-canyon-house/high/1.jpg" loading="lazy" alt="" data-link="https://mpfcoelho.artstation.com/projects/RnGqYD" onclick="openModalMainImage(this.parentElement)">
                     </div>
                     <div class="gallery-img-container">
-                        <img src="img/projects/misty-cabin/7.jpg" loading="lazy" alt="" data-link="https://mpfcoelho.artstation.com/projects/ZeR4BR" onclick="openModalMainImage(this.parentElement)">
+                        <img src="img/projects/sunshine-canyon-house/low/2.jpg" data-full="img/projects/sunshine-canyon-house/high/2.jpg" loading="lazy" alt="" data-link="https://mpfcoelho.artstation.com/projects/RnGqYD" onclick="openModalMainImage(this.parentElement)">
                     </div>
                     <div class="gallery-img-container">
-                        <img src="img/projects/chess-is-an-art-form/1.jpg" loading="lazy" alt="" data-link="https://mpfcoelho.artstation.com/projects/X12q6y" onclick="openModalMainImage(this.parentElement)">
+                        <img src="img/projects/classic-living/low/1.jpg" data-full="img/projects/classic-living/high/1.jpg" loading="lazy" alt="" data-link="https://mpfcoelho.artstation.com/projects/eJeXeX" onclick="openModalMainImage(this.parentElement)">
                     </div>
                     <div class="gallery-img-container">
-                        <img src="img/projects/chess-is-an-art-form/2.jpg" loading="lazy" alt="" data-link="https://mpfcoelho.artstation.com/projects/X12q6y" onclick="openModalMainImage(this.parentElement)">
+                        <img src="img/projects/colored-nature/low/1.jpg" data-full="img/projects/colored-nature/high/1.jpg" loading="lazy" alt="" data-link="https://mpfcoelho.artstation.com/projects/RnNG2X" onclick="openModalMainImage(this.parentElement)">
+                    </div>
+                </div>
+                <div class="grid-column">
+                    <div class="gallery-img-container">
+                        <img src="img/projects/the-underground-temple/low/1.jpg" data-full="img/projects/the-underground-temple/high/1.jpg" loading="lazy" alt="" data-link="https://mpfcoelho.artstation.com/projects/LexEeR" onclick="openModalMainImage(this.parentElement)">
                     </div>
                     <div class="gallery-img-container">
-                        <img src="img/projects/chess-is-an-art-form/3.jpg" loading="lazy" alt="" data-link="https://mpfcoelho.artstation.com/projects/X12q6y" onclick="openModalMainImage(this.parentElement)">
+                        <img src="img/projects/misty-cabin/low/7.jpg" data-full="img/projects/misty-cabin/high/7.jpg" loading="lazy" alt="" data-link="https://mpfcoelho.artstation.com/projects/ZeR4BR" onclick="openModalMainImage(this.parentElement)">
                     </div>
                     <div class="gallery-img-container">
-                        <img src="img/projects/chess-is-an-art-form/4.jpg" loading="lazy" alt="" data-link="https://mpfcoelho.artstation.com/projects/X12q6y" onclick="openModalMainImage(this.parentElement)">
+                        <img src="img/projects/chess-is-an-art-form/low/1.jpg" data-full="img/projects/chess-is-an-art-form/high/1.jpg" loading="lazy" alt="" data-link="https://mpfcoelho.artstation.com/projects/X12q6y" onclick="openModalMainImage(this.parentElement)">
                     </div>
                     <div class="gallery-img-container">
-                        <img src="img/projects/chess-is-an-art-form/5.jpg" loading="lazy" alt="" data-link="https://mpfcoelho.artstation.com/projects/X12q6y" onclick="openModalMainImage(this.parentElement)">
+                        <img src="img/projects/chess-is-an-art-form/low/2.jpg" data-full="img/projects/chess-is-an-art-form/high/2.jpg" loading="lazy" alt="" data-link="https://mpfcoelho.artstation.com/projects/X12q6y" onclick="openModalMainImage(this.parentElement)">
                     </div>
                     <div class="gallery-img-container">
-                        <img src="img/projects/chess-is-an-art-form/6.jpg" loading="lazy" alt="" data-link="https://mpfcoelho.artstation.com/projects/X12q6y" onclick="openModalMainImage(this.parentElement)">
+                        <img src="img/projects/chess-is-an-art-form/low/3.jpg" data-full="img/projects/chess-is-an-art-form/high/3.jpg" loading="lazy" alt="" data-link="https://mpfcoelho.artstation.com/projects/X12q6y" onclick="openModalMainImage(this.parentElement)">
                     </div>
                     <div class="gallery-img-container">
-                        <img src="img/projects/midnight-payphone/1.jpg" loading="lazy" alt="" data-link="https://mpfcoelho.artstation.com/projects/6bPQVr" onclick="openModalMainImage(this.parentElement)">
+                        <img src="img/projects/chess-is-an-art-form/low/4.jpg" data-full="img/projects/chess-is-an-art-form/high/4.jpg" loading="lazy" alt="" data-link="https://mpfcoelho.artstation.com/projects/X12q6y" onclick="openModalMainImage(this.parentElement)">
                     </div>
                     <div class="gallery-img-container">
-                        <img src="img/projects/midnight-payphone/2.jpg" loading="lazy" alt="" data-link="https://mpfcoelho.artstation.com/projects/6bPQVr" onclick="openModalMainImage(this.parentElement)">
+                        <img src="img/projects/chess-is-an-art-form/low/5.jpg" data-full="img/projects/chess-is-an-art-form/high/5.jpg" loading="lazy" alt="" data-link="https://mpfcoelho.artstation.com/projects/X12q6y" onclick="openModalMainImage(this.parentElement)">
                     </div>
                     <div class="gallery-img-container">
-                        <img src="img/projects/midnight-payphone/3.jpg" loading="lazy" alt="" data-link="https://mpfcoelho.artstation.com/projects/6bPQVr" onclick="openModalMainImage(this.parentElement)">
+                        <img src="img/projects/chess-is-an-art-form/low/6.jpg" data-full="img/projects/chess-is-an-art-form/high/6.jpg" loading="lazy" alt="" data-link="https://mpfcoelho.artstation.com/projects/X12q6y" onclick="openModalMainImage(this.parentElement)">
                     </div>
                     <div class="gallery-img-container">
-                        <img src="img/projects/filmic-interior-closeups/1.jpg" loading="lazy" alt="" data-link="https://mpfcoelho.artstation.com/projects/yJnqXJ" onclick="openModalMainImage(this.parentElement)">
+                        <img src="img/projects/midnight-payphone/low/1.jpg" data-full="img/projects/midnight-payphone/high/1.jpg" loading="lazy" alt="" data-link="https://mpfcoelho.artstation.com/projects/6bPQVr" onclick="openModalMainImage(this.parentElement)">
                     </div>
                     <div class="gallery-img-container">
-                        <img src="img/projects/filmic-interior-closeups/2.jpg" loading="lazy" alt="" data-link="https://mpfcoelho.artstation.com/projects/yJnqXJ" onclick="openModalMainImage(this.parentElement)">
+                        <img src="img/projects/midnight-payphone/low/2.jpg" data-full="img/projects/midnight-payphone/high/2.jpg" loading="lazy" alt="" data-link="https://mpfcoelho.artstation.com/projects/6bPQVr" onclick="openModalMainImage(this.parentElement)">
                     </div>
                     <div class="gallery-img-container">
-                        <img src="img/projects/filmic-interior-closeups/3.jpg" loading="lazy" alt="" data-link="https://mpfcoelho.artstation.com/projects/yJnqXJ" onclick="openModalMainImage(this.parentElement)">
+                        <img src="img/projects/midnight-payphone/low/3.jpg" data-full="img/projects/midnight-payphone/high/3.jpg" loading="lazy" alt="" data-link="https://mpfcoelho.artstation.com/projects/6bPQVr" onclick="openModalMainImage(this.parentElement)">
                     </div>
                     <div class="gallery-img-container">
-                        <img src="img/projects/filmic-interior-closeups/4.jpg" loading="lazy" alt="" data-link="https://mpfcoelho.artstation.com/projects/yJnqXJ" onclick="openModalMainImage(this.parentElement)">
+                        <img src="img/projects/filmic-interior-closeups/low/1.jpg" data-full="img/projects/filmic-interior-closeups/high/1.jpg" loading="lazy" alt="" data-link="https://mpfcoelho.artstation.com/projects/yJnqXJ" onclick="openModalMainImage(this.parentElement)">
                     </div>
                     <div class="gallery-img-container">
-                        <img src="img/projects/sunshine-canyon-house/1.jpg" loading="lazy" alt="" data-link="https://mpfcoelho.artstation.com/projects/RnGqYD" onclick="openModalMainImage(this.parentElement)">
+                        <img src="img/projects/filmic-interior-closeups/low/2.jpg" data-full="img/projects/filmic-interior-closeups/high/2.jpg" loading="lazy" alt="" data-link="https://mpfcoelho.artstation.com/projects/yJnqXJ" onclick="openModalMainImage(this.parentElement)">
                     </div>
                     <div class="gallery-img-container">
-                        <img src="img/projects/sunshine-canyon-house/2.jpg" loading="lazy" alt="" data-link="https://mpfcoelho.artstation.com/projects/RnGqYD" onclick="openModalMainImage(this.parentElement)">
+                        <img src="img/projects/filmic-interior-closeups/low/3.jpg" data-full="img/projects/filmic-interior-closeups/high/3.jpg" loading="lazy" alt="" data-link="https://mpfcoelho.artstation.com/projects/yJnqXJ" onclick="openModalMainImage(this.parentElement)">
                     </div>
-                    <div class="gallery-img-container">
-                        <img src="img/projects/classic-living/1.jpg" loading="lazy" alt="" data-link="https://mpfcoelho.artstation.com/projects/eJeXeX" onclick="openModalMainImage(this.parentElement)">
-                    </div>
-                    <div class="gallery-img-container">
-                        <img src="img/projects/colored-nature/1.jpg" loading="lazy" alt="" data-link="https://mpfcoelho.artstation.com/projects/RnNG2X" onclick="openModalMainImage(this.parentElement)">
-                    </div>
-                    <div class="gallery-img-container">
-                        <img src="img/projects/the-underground-temple/1.jpg" loading="lazy" alt="" data-link="https://mpfcoelho.artstation.com/projects/LexEeR" onclick="openModalMainImage(this.parentElement)">
-                    </div>   
+                </div>
             </article>
             <article id="projects" class="projects">
                 <div class="work">
                     <div class="main-image">
-                        <img src="img/projects/that-time-of-the-year/1.jpg" loading="lazy" data-link="https://mpfcoelho.artstation.com/projects/KeZQB9" onclick="openModalMainImage(this.parentElement)">
+                        <img src="img/projects/that-time-of-the-year/low/1.jpg" loading="lazy" alt="" data-full="img/projects/that-time-of-the-year/high/1.jpg" data-link="https://mpfcoelho.artstation.com/projects/KeZQB9" onclick="openModalMainImage(this.parentElement)">
                         <a href="https://mpfcoelho.artstation.com/projects/KeZQB9" target="_blank" class="work-title">THAT TIME OF THE YEAR</a>
                         <div class="arrows">
                             <button class="prev-button" onclick="changeImage(-1)">❮</button>
                             <button class="next-button" onclick="changeImage(1)">❯</button>
                         </div>
                         <div class="thumbnails">
-                            <div class="thumbnail active" data-image="img/projects/that-time-of-the-year/1.jpg"></div>
-                            <div class="thumbnail" data-image="img/projects/that-time-of-the-year/2.jpg"></div>
-                            <div class="thumbnail" data-image="img/projects/that-time-of-the-year/3.jpg"></div>
-                            <div class="thumbnail" data-image="img/projects/that-time-of-the-year/4.jpg"></div>
+                            <div class="thumbnail active" data-image="img/projects/that-time-of-the-year/low/1.jpg" data-full="img/projects/that-time-of-the-year/high/1.jpg"></div>
+                            <div class="thumbnail" data-image="img/projects/that-time-of-the-year/low/2.jpg" data-full="img/projects/that-time-of-the-year/high/2.jpg"></div>
+                            <div class="thumbnail" data-image="img/projects/that-time-of-the-year/low/3.jpg" data-full="img/projects/that-time-of-the-year/high/3.jpg"></div>
+                            <div class="thumbnail" data-image="img/projects/that-time-of-the-year/low/4.jpg" data-full="img/projects/that-time-of-the-year/high/4.jpg"></div>
                         </div>
                     </div>
                 </div>
                 <div class="work">
                     <div class="main-image">
-                        <img src="img/projects/mystical-lake/1.jpg" loading="lazy" data-link="https://mpfcoelho.artstation.com/projects/Za9mnx" onclick="openModalMainImage(this.parentElement)">
+                        <img src="img/projects/mystical-lake/low/1.jpg" loading="lazy" alt="" data-full="img/projects/mystical-lake/high/1.jpg" data-link="https://mpfcoelho.artstation.com/projects/Za9mnx" onclick="openModalMainImage(this.parentElement)">
                         <a href="https://mpfcoelho.artstation.com/projects/Za9mnx" target="_blank" class="work-title">MYSTICAL LAKE</a>
                         <div class="arrows">
                             <button class="prev-button" onclick="changeImage(-1)">❮</button>
                             <button class="next-button" onclick="changeImage(1)">❯</button>
                         </div>
                         <div class="thumbnails">
-                            <div class="thumbnail active" data-image="img/projects/mystical-lake/1.jpg"></div>
-                            <div class="thumbnail" data-image="img/projects/mystical-lake/2.jpg"></div>
-                            <div class="thumbnail" data-image="img/projects/mystical-lake/3.jpg"></div>
-                            <div class="thumbnail" data-image="img/projects/mystical-lake/4.jpg"></div>
+                            <div class="thumbnail active" data-image="img/projects/mystical-lake/low/1.jpg" data-full="img/projects/mystical-lake/high/1.jpg"></div>
+                            <div class="thumbnail" data-image="img/projects/mystical-lake/low/2.jpg" data-full="img/projects/mystical-lake/high/2.jpg"></div>
+                            <div class="thumbnail" data-image="img/projects/mystical-lake/low/3.jpg" data-full="img/projects/mystical-lake/high/3.jpg"></div>
+                            <div class="thumbnail" data-image="img/projects/mystical-lake/low/4.jpg" data-full="img/projects/mystical-lake/high/4.jpg"></div>
                         </div>
                     </div>
-                </div>        
+                </div>                        
                 <div class="work">
                     <div class="main-image">
-                        <img src="img/projects/midnight-fuel/1.jpg" loading="lazy" data-link="https://mpfcoelho.artstation.com/projects/Xg9dLl" onclick="openModalMainImage(this.parentElement)">
+                        <img src="img/projects/midnight-fuel/low/1.jpg" loading="lazy" alt="" data-full="img/projects/midnight-fuel/high/1.jpg" data-link="https://mpfcoelho.artstation.com/projects/Xg9dLl" onclick="openModalMainImage(this.parentElement)">
                         <a href="https://mpfcoelho.artstation.com/projects/Xg9dLl" target="_blank" class="work-title">MIDNIGHT FUEL / GAS STATION 3D ARTWORK</a>
                         <div class="arrows">
                             <button class="prev-button" onclick="changeImage(-1)">❮</button>
                             <button class="next-button" onclick="changeImage(1)">❯</button>
                         </div>
                         <div class="thumbnails">
-                            <div class="thumbnail active" data-image="img/projects/midnight-fuel/1.jpg"></div>
-                            <div class="thumbnail" data-image="img/projects/midnight-fuel/2.jpg"></div>
-                            <div class="thumbnail" data-image="img/projects/midnight-fuel/3.jpg"></div>
-                            <div class="thumbnail" data-image="img/projects/midnight-fuel/4.jpg"></div>
-                            <div class="thumbnail" data-image="img/projects/midnight-fuel/5.jpg"></div>
-                            <div class="thumbnail" data-image="img/projects/midnight-fuel/6.jpg"></div>
-                            <div class="thumbnail" data-image="img/projects/midnight-fuel/7.jpg"></div>
-                            <div class="thumbnail" data-image="img/projects/midnight-fuel/8.jpg"></div>
-                            <div class="thumbnail" data-image="img/projects/midnight-fuel/9.jpg"></div>
-                            <div class="thumbnail" data-image="img/projects/midnight-fuel/10.jpg"></div>
-                            <div class="thumbnail" data-image="img/projects/midnight-fuel/11.jpg"></div>
-                            <div class="thumbnail" data-image="img/projects/midnight-fuel/12.jpg"></div>
-                            <div class="thumbnail" data-image="img/projects/midnight-fuel/13.jpg"></div>
+                            <div class="thumbnail active" data-image="img/projects/midnight-fuel/low/1.jpg" data-full="img/projects/midnight-fuel/high/1.jpg"></div>
+                            <div class="thumbnail" data-image="img/projects/midnight-fuel/low/2.jpg" data-full="img/projects/midnight-fuel/high/2.jpg"></div>
+                            <div class="thumbnail" data-image="img/projects/midnight-fuel/low/3.jpg" data-full="img/projects/midnight-fuel/high/3.jpg"></div>
+                            <div class="thumbnail" data-image="img/projects/midnight-fuel/low/4.jpg" data-full="img/projects/midnight-fuel/high/4.jpg"></div>
+                            <div class="thumbnail" data-image="img/projects/midnight-fuel/low/5.jpg" data-full="img/projects/midnight-fuel/high/5.jpg"></div>
+                            <div class="thumbnail" data-image="img/projects/midnight-fuel/low/6.jpg" data-full="img/projects/midnight-fuel/high/6.jpg"></div>
+                            <div class="thumbnail" data-image="img/projects/midnight-fuel/low/7.jpg" data-full="img/projects/midnight-fuel/high/7.jpg"></div>
+                            <div class="thumbnail" data-image="img/projects/midnight-fuel/low/8.jpg" data-full="img/projects/midnight-fuel/high/8.jpg"></div>
+                            <div class="thumbnail" data-image="img/projects/midnight-fuel/low/9.jpg" data-full="img/projects/midnight-fuel/high/9.jpg"></div>
+                            <div class="thumbnail" data-image="img/projects/midnight-fuel/low/10.jpg" data-full="img/projects/midnight-fuel/high/10.jpg"></div>
+                            <div class="thumbnail" data-image="img/projects/midnight-fuel/low/11.jpg" data-full="img/projects/midnight-fuel/high/11.jpg"></div>
+                            <div class="thumbnail" data-image="img/projects/midnight-fuel/low/12.jpg" data-full="img/projects/midnight-fuel/high/12.jpg"></div>
+                            <div class="thumbnail" data-image="img/projects/midnight-fuel/low/13.jpg" data-full="img/projects/midnight-fuel/high/13.jpg"></div>
                         </div>
                     </div>
-                </div>
+                </div>                
                 <div class="work">
                     <div class="main-image">
-                        <img src="img/projects/neon-heist/1.jpg" loading="lazy" data-link="https://mpfcoelho.artstation.com/projects/lDawoa" onclick="openModalMainImage(this.parentElement)">
+                        <img src="img/projects/neon-heist/low/1.jpg" loading="lazy" alt="" data-full="img/projects/neon-heist/high/1.jpg" data-link="https://mpfcoelho.artstation.com/projects/lDawoa" onclick="openModalMainImage(this.parentElement)">
                         <a href="https://mpfcoelho.artstation.com/projects/lDawoa" target="_blank" class="work-title">NEON HEIST</a>
                         <div class="arrows">
                             <button class="prev-button" onclick="changeImage(-1)">❮</button>
                             <button class="next-button" onclick="changeImage(1)">❯</button>
                         </div>
                         <div class="thumbnails">
-                            <div class="thumbnail active" data-image="img/projects/neon-heist/1.jpg"></div>
-                            <div class="thumbnail" data-image="img/projects/neon-heist/2.jpg"></div>
-                            <div class="thumbnail" data-image="img/projects/neon-heist/3.jpg"></div>
-                            <div class="thumbnail" data-image="img/projects/neon-heist/4.jpg"></div>
+                            <div class="thumbnail active" data-image="img/projects/neon-heist/low/1.jpg" data-full="img/projects/neon-heist/high/1.jpg"></div>
+                            <div class="thumbnail" data-image="img/projects/neon-heist/low/2.jpg" data-full="img/projects/neon-heist/high/2.jpg"></div>
+                            <div class="thumbnail" data-image="img/projects/neon-heist/low/3.jpg" data-full="img/projects/neon-heist/high/3.jpg"></div>
+                            <div class="thumbnail" data-image="img/projects/neon-heist/low/4.jpg" data-full="img/projects/neon-heist/high/4.jpg"></div>
                         </div>
                     </div>
-                </div>
+                </div>                
                 <div class="work">
                     <div class="main-image">
-                        <img src="img/projects/the-way-out/1.gif" loading="lazy" data-link="https://mpfcoelho.artstation.com/projects/03dAe8" onclick="openModalMainImage(this.parentElement)">
+                        <img src="img/projects/the-way-out/low/1.gif" loading="lazy" alt="" data-full="img/projects/the-way-out/high/1.gif" data-link="https://mpfcoelho.artstation.com/projects/03dAe8" onclick="openModalMainImage(this.parentElement)">
                         <a href="https://mpfcoelho.artstation.com/projects/03dAe8" target="_blank" class="work-title">THE WAY OUT (ABANDONED/POST-APOCALYPTIC HOSPITAL)</a>
                         <div class="arrows">
                             <button class="prev-button" onclick="changeImage(-1)">❮</button>
                             <button class="next-button" onclick="changeImage(1)">❯</button>
                         </div>
                         <div class="thumbnails">
-                            <div class="thumbnail active" data-image="img/projects/the-way-out/1.gif"></div>
-                            <div class="thumbnail" data-image="img/projects/the-way-out/2.jpg"></div>
-                            <div class="thumbnail" data-image="img/projects/the-way-out/3.jpg"></div>
-                            <div class="thumbnail" data-image="img/projects/the-way-out/4.jpg"></div>
-                            <div class="thumbnail" data-image="img/projects/the-way-out/5.jpg"></div>
-                            <div class="thumbnail" data-image="img/projects/the-way-out/6.jpg"></div>
-                            <div class="thumbnail" data-image="img/projects/the-way-out/7.jpg"></div>
+                            <div class="thumbnail active" data-image="img/projects/the-way-out/low/1.gif" data-full="img/projects/the-way-out/high/1.gif"></div>
+                            <div class="thumbnail" data-image="img/projects/the-way-out/low/2.jpg" data-full="img/projects/the-way-out/high/2.jpg"></div>
+                            <div class="thumbnail" data-image="img/projects/the-way-out/low/3.jpg" data-full="img/projects/the-way-out/high/3.jpg"></div>
+                            <div class="thumbnail" data-image="img/projects/the-way-out/low/4.jpg" data-full="img/projects/the-way-out/high/4.jpg"></div>
+                            <div class="thumbnail" data-image="img/projects/the-way-out/low/5.jpg" data-full="img/projects/the-way-out/high/5.jpg"></div>
+                            <div class="thumbnail" data-image="img/projects/the-way-out/low/6.jpg" data-full="img/projects/the-way-out/high/6.jpg"></div>
+                            <div class="thumbnail" data-image="img/projects/the-way-out/low/7.jpg" data-full="img/projects/the-way-out/high/7.jpg"></div>
                         </div>
                     </div>
-                </div>
+                </div>                
                 <div class="work">
                     <div class="main-image">
-                        <img src="img/projects/palace-pool/1.jpg" loading="lazy" data-link="https://mpfcoelho.artstation.com/projects/kl95Jd" onclick="openModalMainImage(this.parentElement)">
+                        <img src="img/projects/palace-pool/low/1.jpg" loading="lazy" alt="" data-full="img/projects/palace-pool/high/1.jpg" data-link="https://mpfcoelho.artstation.com/projects/kl95Jd" onclick="openModalMainImage(this.parentElement)">
                         <a href="https://mpfcoelho.artstation.com/projects/kl95Jd" target="_blank" class="work-title">PALACE POOL - ARCHVIZ STUDY</a>
                         <div class="arrows">
                             <button class="prev-button" onclick="changeImage(-1)">❮</button>
                             <button class="next-button" onclick="changeImage(1)">❯</button>
                         </div>
                         <div class="thumbnails">
-                            <div class="thumbnail active" data-image="img/projects/palace-pool/1.jpg"></div>
-                            <div class="thumbnail" data-image="img/projects/palace-pool/2.jpg"></div>
-                            <div class="thumbnail" data-image="img/projects/palace-pool/3.jpg"></div>
-                            <div class="thumbnail" data-image="img/projects/palace-pool/4.jpg"></div>
+                            <div class="thumbnail active" data-image="img/projects/palace-pool/low/1.jpg" data-full="img/projects/palace-pool/high/1.jpg"></div>
+                            <div class="thumbnail" data-image="img/projects/palace-pool/low/2.jpg" data-full="img/projects/palace-pool/high/2.jpg"></div>
+                            <div class="thumbnail" data-image="img/projects/palace-pool/low/3.jpg" data-full="img/projects/palace-pool/high/3.jpg"></div>
+                            <div class="thumbnail" data-image="img/projects/palace-pool/low/4.jpg" data-full="img/projects/palace-pool/high/4.jpg"></div>
                         </div>
                     </div>
-                </div>
+                </div>                
                 <div class="work">
                     <div class="main-image">
-                        <img src="img/projects/roman-ruins/1.jpg" loading="lazy" data-link="https://mpfcoelho.artstation.com/projects/Wm8V52" onclick="openModalMainImage(this.parentElement)">
+                        <img src="img/projects/roman-ruins/low/1.jpg" loading="lazy" alt="" data-full="img/projects/roman-ruins/high/1.jpg" data-link="https://mpfcoelho.artstation.com/projects/Wm8V52" onclick="openModalMainImage(this.parentElement)">
                         <a href="https://mpfcoelho.artstation.com/projects/Wm8V52" target="_blank" class="work-title">ROMAN RUINS</a>
                         <div class="arrows">
                             <button class="prev-button" onclick="changeImage(-1)">❮</button>
                             <button class="next-button" onclick="changeImage(1)">❯</button>
                         </div>
                         <div class="thumbnails">
-                            <div class="thumbnail active" data-image="img/projects/roman-ruins/1.jpg"></div>
-                            <div class="thumbnail" data-image="img/projects/roman-ruins/2.jpg"></div>
-                            <div class="thumbnail" data-image="img/projects/roman-ruins/3.jpg"></div>
-                            <div class="thumbnail" data-image="img/projects/roman-ruins/4.jpg"></div>
-                            <div class="thumbnail" data-image="img/projects/roman-ruins/5.jpg"></div>
-                            <div class="thumbnail" data-image="img/projects/roman-ruins/6.jpg"></div>
-                            <div class="thumbnail" data-image="img/projects/roman-ruins/7.jpg"></div>
-                            <div class="thumbnail" data-image="img/projects/roman-ruins/8.jpg"></div>
-                            <div class="thumbnail" data-image="img/projects/roman-ruins/9.jpg"></div>
+                            <div class="thumbnail active" data-image="img/projects/roman-ruins/low/1.jpg" data-full="img/projects/roman-ruins/high/1.jpg"></div>
+                            <div class="thumbnail" data-image="img/projects/roman-ruins/low/2.jpg" data-full="img/projects/roman-ruins/high/2.jpg"></div>
+                            <div class="thumbnail" data-image="img/projects/roman-ruins/low/3.jpg" data-full="img/projects/roman-ruins/high/3.jpg"></div>
+                            <div class="thumbnail" data-image="img/projects/roman-ruins/low/4.jpg" data-full="img/projects/roman-ruins/high/4.jpg"></div>
+                            <div class="thumbnail" data-image="img/projects/roman-ruins/low/5.jpg" data-full="img/projects/roman-ruins/high/5.jpg"></div>
+                            <div class="thumbnail" data-image="img/projects/roman-ruins/low/6.jpg" data-full="img/projects/roman-ruins/high/6.jpg"></div>
+                            <div class="thumbnail" data-image="img/projects/roman-ruins/low/7.jpg" data-full="img/projects/roman-ruins/high/7.jpg"></div>
+                            <div class="thumbnail" data-image="img/projects/roman-ruins/low/8.jpg" data-full="img/projects/roman-ruins/high/8.jpg"></div>
+                            <div class="thumbnail" data-image="img/projects/roman-ruins/low/9.jpg" data-full="img/projects/roman-ruins/high/9.jpg"></div>
                         </div>
                     </div>
-                </div>
+                </div>                
                 <div class="work">
                     <div class="main-image">
-                        <img src="img/projects/dodge-charger-1969/1.jpg" loading="lazy" data-link="https://mpfcoelho.artstation.com/projects/6bB6w5" onclick="openModalMainImage(this.parentElement)">
+                        <img src="img/projects/dodge-charger-1969/low/1.jpg" loading="lazy" alt="" data-full="img/projects/dodge-charger-1969/high/1.jpg" data-link="https://mpfcoelho.artstation.com/projects/6bB6w5" onclick="openModalMainImage(this.parentElement)">
                         <a href="https://mpfcoelho.artstation.com/projects/6bB6w5" target="_blank" class="work-title">DODGE CHARGER 1969</a>
                         <div class="arrows">
                             <button class="prev-button" onclick="changeImage(-1)">❮</button>
                             <button class="next-button" onclick="changeImage(1)">❯</button>
                         </div>
                         <div class="thumbnails">
-                            <div class="thumbnail active" data-image="img/projects/dodge-charger-1969/1.jpg"></div>
-                            <div class="thumbnail" data-image="img/projects/dodge-charger-1969/2.jpg"></div>
-                            <div class="thumbnail" data-image="img/projects/dodge-charger-1969/3.jpg"></div>
-                            <div class="thumbnail" data-image="img/projects/dodge-charger-1969/4.jpg"></div>
+                            <div class="thumbnail active" data-image="img/projects/dodge-charger-1969/low/1.jpg" data-full="img/projects/dodge-charger-1969/high/1.jpg"></div>
+                            <div class="thumbnail" data-image="img/projects/dodge-charger-1969/low/2.jpg" data-full="img/projects/dodge-charger-1969/high/2.jpg"></div>
+                            <div class="thumbnail" data-image="img/projects/dodge-charger-1969/low/3.jpg" data-full="img/projects/dodge-charger-1969/high/3.jpg"></div>
+                            <div class="thumbnail" data-image="img/projects/dodge-charger-1969/low/4.jpg" data-full="img/projects/dodge-charger-1969/high/4.jpg"></div>
                         </div>
                     </div>
-                </div>
+                </div>                
                 <div class="work">
                     <div class="main-image">
-                        <img src="img/projects/kosaten-japanese-bridge/1.jpg" loading="lazy" data-link="https://mpfcoelho.artstation.com/projects/yJ6eDR" onclick="openModalMainImage(this.parentElement)">
+                        <img src="img/projects/kosaten-japanese-bridge/low/1.jpg" loading="lazy" alt="" data-full="img/projects/kosaten-japanese-bridge/high/1.jpg" data-link="https://mpfcoelho.artstation.com/projects/yJ6eDR" onclick="openModalMainImage(this.parentElement)">
                         <a href="https://mpfcoelho.artstation.com/projects/yJ6eDR" target="_blank" class="work-title">KŌSATEN (JAPANESE BRIDGE)</a>
                         <div class="arrows">
                             <button class="prev-button" onclick="changeImage(-1)">❮</button>
                             <button class="next-button" onclick="changeImage(1)">❯</button>
                         </div>
                         <div class="thumbnails">
-                            <div class="thumbnail active" data-image="img/projects/kosaten-japanese-bridge/1.jpg"></div>
-                            <div class="thumbnail" data-image="img/projects/kosaten-japanese-bridge/2.jpg"></div>
-                            <div class="thumbnail" data-image="img/projects/kosaten-japanese-bridge/3.jpg"></div>
-                            <div class="thumbnail" data-image="img/projects/kosaten-japanese-bridge/4.jpg"></div>
-                            <div class="thumbnail" data-image="img/projects/kosaten-japanese-bridge/5.jpg"></div>
+                            <div class="thumbnail active" data-image="img/projects/kosaten-japanese-bridge/low/1.jpg" data-full="img/projects/kosaten-japanese-bridge/high/1.jpg"></div>
+                            <div class="thumbnail" data-image="img/projects/kosaten-japanese-bridge/low/2.jpg" data-full="img/projects/kosaten-japanese-bridge/high/2.jpg"></div>
+                            <div class="thumbnail" data-image="img/projects/kosaten-japanese-bridge/low/3.jpg" data-full="img/projects/kosaten-japanese-bridge/high/3.jpg"></div>
+                            <div class="thumbnail" data-image="img/projects/kosaten-japanese-bridge/low/4.jpg" data-full="img/projects/kosaten-japanese-bridge/high/4.jpg"></div>
+                            <div class="thumbnail" data-image="img/projects/kosaten-japanese-bridge/low/5.jpg" data-full="img/projects/kosaten-japanese-bridge/high/5.jpg"></div>
                         </div>
                     </div>
-                </div>
+                </div>                
                 <div class="work">
                     <div class="main-image">
-                        <img src="img/projects/the-last-sunset/1.jpg" loading="lazy" data-link="https://mpfcoelho.artstation.com/projects/o2V6gB" onclick="openModalMainImage(this.parentElement)">
+                        <img src="img/projects/the-last-sunset/low/1.jpg" loading="lazy" alt="" data-full="img/projects/the-last-sunset/high/1.jpg" data-link="https://mpfcoelho.artstation.com/projects/o2V6gB" onclick="openModalMainImage(this.parentElement)">
                         <a href="https://mpfcoelho.artstation.com/projects/o2V6gB" target="_blank" class="work-title">THE LAST SUNSET</a>
                         <div class="arrows">
                             <button class="prev-button" onclick="changeImage(-1)">❮</button>
                             <button class="next-button" onclick="changeImage(1)">❯</button>
                         </div>
                         <div class="thumbnails">
-                            <div class="thumbnail active" data-image="img/projects/the-last-sunset/1.jpg"></div>
-                            <div class="thumbnail" data-image="img/projects/the-last-sunset/2.jpg"></div>
-                            <div class="thumbnail" data-image="img/projects/the-last-sunset/3.jpg"></div>
-                            <div class="thumbnail" data-image="img/projects/the-last-sunset/4.jpg"></div>
-                            <div class="thumbnail" data-image="img/projects/the-last-sunset/5.jpg"></div>
-                            <div class="thumbnail" data-image="img/projects/the-last-sunset/6.jpg"></div>
+                            <div class="thumbnail active" data-image="img/projects/the-last-sunset/low/1.jpg" data-full="img/projects/the-last-sunset/high/1.jpg"></div>
+                            <div class="thumbnail" data-image="img/projects/the-last-sunset/low/2.jpg" data-full="img/projects/the-last-sunset/high/2.jpg"></div>
+                            <div class="thumbnail" data-image="img/projects/the-last-sunset/low/3.jpg" data-full="img/projects/the-last-sunset/high/3.jpg"></div>
+                            <div class="thumbnail" data-image="img/projects/the-last-sunset/low/4.jpg" data-full="img/projects/the-last-sunset/high/4.jpg"></div>
+                            <div class="thumbnail" data-image="img/projects/the-last-sunset/low/5.jpg" data-full="img/projects/the-last-sunset/high/5.jpg"></div>
+                            <div class="thumbnail" data-image="img/projects/the-last-sunset/low/6.jpg" data-full="img/projects/the-last-sunset/high/6.jpg"></div>
                         </div>
                     </div>
-                </div>
+                </div>                
                 <div class="work">
                     <div class="main-image">
-                        <img src="img/projects/misty-cabin/1.jpg" loading="lazy" data-link="https://mpfcoelho.artstation.com/projects/ZeR4BR" onclick="openModalMainImage(this.parentElement)">
+                        <img src="img/projects/misty-cabin/low/1.jpg" loading="lazy" alt="" data-full="img/projects/misty-cabin/high/1.jpg" data-link="https://mpfcoelho.artstation.com/projects/ZeR4BR" onclick="openModalMainImage(this.parentElement)">
                         <a href="https://mpfcoelho.artstation.com/projects/ZeR4BR" target="_blank" class="work-title">MISTY CABIN</a>
                         <div class="arrows">
                             <button class="prev-button" onclick="changeImage(-1)">❮</button>
                             <button class="next-button" onclick="changeImage(1)">❯</button>
                         </div>
                         <div class="thumbnails">
-                            <div class="thumbnail active" data-image="img/projects/misty-cabin/1.jpg"></div>
-                            <div class="thumbnail" data-image="img/projects/misty-cabin/2.jpg"></div>
-                            <div class="thumbnail" data-image="img/projects/misty-cabin/3.jpg"></div>
-                            <div class="thumbnail" data-image="img/projects/misty-cabin/4.jpg"></div>
-                            <div class="thumbnail" data-image="img/projects/misty-cabin/5.jpg"></div>
-                            <div class="thumbnail" data-image="img/projects/misty-cabin/6.jpg"></div>
-                            <div class="thumbnail" data-image="img/projects/misty-cabin/7.jpg"></div>
-                            <div class="thumbnail" data-image="img/projects/misty-cabin/8.jpg"></div>
-                            <div class="thumbnail" data-image="img/projects/misty-cabin/9.jpg"></div>
-                            <div class="thumbnail" data-image="img/projects/misty-cabin/10.jpg"></div>
-                            <div class="thumbnail" data-image="img/projects/misty-cabin/11.jpg"></div>
-                            <div class="thumbnail" data-image="img/projects/misty-cabin/12.jpg"></div>
+                            <div class="thumbnail active" data-image="img/projects/misty-cabin/low/1.jpg" data-full="img/projects/misty-cabin/high/1.jpg"></div>
+                            <div class="thumbnail" data-image="img/projects/misty-cabin/low/2.jpg" data-full="img/projects/misty-cabin/high/2.jpg"></div>
+                            <div class="thumbnail" data-image="img/projects/misty-cabin/low/3.jpg" data-full="img/projects/misty-cabin/high/3.jpg"></div>
+                            <div class="thumbnail" data-image="img/projects/misty-cabin/low/4.jpg" data-full="img/projects/misty-cabin/high/4.jpg"></div>
+                            <div class="thumbnail" data-image="img/projects/misty-cabin/low/5.jpg" data-full="img/projects/misty-cabin/high/5.jpg"></div>
+                            <div class="thumbnail" data-image="img/projects/misty-cabin/low/6.jpg" data-full="img/projects/misty-cabin/high/6.jpg"></div>
+                            <div class="thumbnail" data-image="img/projects/misty-cabin/low/7.jpg" data-full="img/projects/misty-cabin/high/7.jpg"></div>
+                            <div class="thumbnail" data-image="img/projects/misty-cabin/low/8.jpg" data-full="img/projects/misty-cabin/high/8.jpg"></div>
+                            <div class="thumbnail" data-image="img/projects/misty-cabin/low/9.jpg" data-full="img/projects/misty-cabin/high/9.jpg"></div>
+                            <div class="thumbnail" data-image="img/projects/misty-cabin/low/10.jpg" data-full="img/projects/misty-cabin/high/10.jpg"></div>
+                            <div class="thumbnail" data-image="img/projects/misty-cabin/low/11.jpg" data-full="img/projects/misty-cabin/high/11.jpg"></div>
+                            <div class="thumbnail" data-image="img/projects/misty-cabin/low/12.jpg" data-full="img/projects/misty-cabin/high/12.jpg"></div>
                         </div>
                     </div>
-                </div>
+                </div>                
                 <div class="work">
                     <div class="main-image">
-                        <img src="img/projects/chess-is-an-art-form/1.jpg" loading="lazy" data-link="https://mpfcoelho.artstation.com/projects/X12q6y" onclick="openModalMainImage(this.parentElement)">
+                        <img src="img/projects/chess-is-an-art-form/low/1.jpg" loading="lazy" alt="" data-full="img/projects/chess-is-an-art-form/high/1.jpg" data-link="https://mpfcoelho.artstation.com/projects/X12q6y" onclick="openModalMainImage(this.parentElement)">
                         <a href="https://mpfcoelho.artstation.com/projects/X12q6y" target="_blank" class="work-title">CHESS IS AN ART FORM</a>
                         <div class="arrows">
                             <button class="prev-button" onclick="changeImage(-1)">❮</button>
                             <button class="next-button" onclick="changeImage(1)">❯</button>
                         </div>
                         <div class="thumbnails">
-                            <div class="thumbnail active" data-image="img/projects/chess-is-an-art-form/1.jpg"></div>
-                            <div class="thumbnail" data-image="img/projects/chess-is-an-art-form/2.jpg"></div>
-                            <div class="thumbnail" data-image="img/projects/chess-is-an-art-form/3.jpg"></div>
-                            <div class="thumbnail" data-image="img/projects/chess-is-an-art-form/4.jpg"></div>
-                            <div class="thumbnail" data-image="img/projects/chess-is-an-art-form/5.jpg"></div>
-                            <div class="thumbnail" data-image="img/projects/chess-is-an-art-form/6.jpg"></div>
-                            <div class="thumbnail" data-image="img/projects/chess-is-an-art-form/7.jpg"></div>
-                            <div class="thumbnail" data-image="img/projects/chess-is-an-art-form/8.jpg"></div>
-                            <div class="thumbnail" data-image="img/projects/chess-is-an-art-form/9.jpg"></div>
-                            <div class="thumbnail" data-image="img/projects/chess-is-an-art-form/10.jpg"></div>
+                            <div class="thumbnail active" data-image="img/projects/chess-is-an-art-form/low/1.jpg" data-full="img/projects/chess-is-an-art-form/high/1.jpg"></div>
+                            <div class="thumbnail" data-image="img/projects/chess-is-an-art-form/low/2.jpg" data-full="img/projects/chess-is-an-art-form/high/2.jpg"></div>
+                            <div class="thumbnail" data-image="img/projects/chess-is-an-art-form/low/3.jpg" data-full="img/projects/chess-is-an-art-form/high/3.jpg"></div>
+                            <div class="thumbnail" data-image="img/projects/chess-is-an-art-form/low/4.jpg" data-full="img/projects/chess-is-an-art-form/high/4.jpg"></div>
+                            <div class="thumbnail" data-image="img/projects/chess-is-an-art-form/low/5.jpg" data-full="img/projects/chess-is-an-art-form/high/5.jpg"></div>
+                            <div class="thumbnail" data-image="img/projects/chess-is-an-art-form/low/6.jpg" data-full="img/projects/chess-is-an-art-form/high/6.jpg"></div>
+                            <div class="thumbnail" data-image="img/projects/chess-is-an-art-form/low/7.jpg" data-full="img/projects/chess-is-an-art-form/high/7.jpg"></div>
+                            <div class="thumbnail" data-image="img/projects/chess-is-an-art-form/low/8.jpg" data-full="img/projects/chess-is-an-art-form/high/8.jpg"></div>
+                            <div class="thumbnail" data-image="img/projects/chess-is-an-art-form/low/9.jpg" data-full="img/projects/chess-is-an-art-form/high/9.jpg"></div>
+                            <div class="thumbnail" data-image="img/projects/chess-is-an-art-form/low/10.jpg" data-full="img/projects/chess-is-an-art-form/high/10.jpg"></div>
                         </div>
                     </div>
-                </div>
+                </div>                
                 <div class="work">
                     <div class="main-image">
-                        <img src="img/projects/midnight-payphone/1.jpg" loading="lazy" data-link="https://mpfcoelho.artstation.com/projects/6bPQVr" onclick="openModalMainImage(this.parentElement)">
+                        <img src="img/projects/midnight-payphone/low/1.jpg" loading="lazy" alt="" data-full="img/projects/midnight-payphone/high/1.jpg" data-link="https://mpfcoelho.artstation.com/projects/6bPQVr" onclick="openModalMainImage(this.parentElement)">
                         <a href="https://mpfcoelho.artstation.com/projects/6bPQVr" target="_blank" class="work-title">MIDNIGHT PAYPHONE</a>
                         <div class="arrows">
                             <button class="prev-button" onclick="changeImage(-1)">❮</button>
                             <button class="next-button" onclick="changeImage(1)">❯</button>
                         </div>
                         <div class="thumbnails">
-                            <div class="thumbnail active" data-image="img/projects/midnight-payphone/1.jpg"></div>
-                            <div class="thumbnail" data-image="img/projects/midnight-payphone/2.jpg"></div>
-                            <div class="thumbnail" data-image="img/projects/midnight-payphone/3.jpg"></div>
-                            <div class="thumbnail" data-image="img/projects/midnight-payphone/4.jpg"></div>
-                            <div class="thumbnail" data-image="img/projects/midnight-payphone/5.jpg"></div>
-                            <div class="thumbnail" data-image="img/projects/midnight-payphone/6.jpg"></div>
-                            <div class="thumbnail" data-image="img/projects/midnight-payphone/7.jpg"></div>
-                            <div class="thumbnail" data-image="img/projects/midnight-payphone/8.jpg"></div>
-                            <div class="thumbnail" data-image="img/projects/midnight-payphone/9.jpg"></div>
-                            <div class="thumbnail" data-image="img/projects/midnight-payphone/10.jpg"></div>
+                            <div class="thumbnail active" data-image="img/projects/midnight-payphone/low/1.jpg" data-full="img/projects/midnight-payphone/high/1.jpg"></div>
+                            <div class="thumbnail" data-image="img/projects/midnight-payphone/low/2.jpg" data-full="img/projects/midnight-payphone/high/2.jpg"></div>
+                            <div class="thumbnail" data-image="img/projects/midnight-payphone/low/3.jpg" data-full="img/projects/midnight-payphone/high/3.jpg"></div>
+                            <div class="thumbnail" data-image="img/projects/midnight-payphone/low/4.jpg" data-full="img/projects/midnight-payphone/high/4.jpg"></div>
+                            <div class="thumbnail" data-image="img/projects/midnight-payphone/low/5.jpg" data-full="img/projects/midnight-payphone/high/5.jpg"></div>
+                            <div class="thumbnail" data-image="img/projects/midnight-payphone/low/6.jpg" data-full="img/projects/midnight-payphone/high/6.jpg"></div>
+                            <div class="thumbnail" data-image="img/projects/midnight-payphone/low/7.jpg" data-full="img/projects/midnight-payphone/high/7.jpg"></div>
+                            <div class="thumbnail" data-image="img/projects/midnight-payphone/low/8.jpg" data-full="img/projects/midnight-payphone/high/8.jpg"></div>
+                            <div class="thumbnail" data-image="img/projects/midnight-payphone/low/9.jpg" data-full="img/projects/midnight-payphone/high/9.jpg"></div>
+                            <div class="thumbnail" data-image="img/projects/midnight-payphone/low/10.jpg" data-full="img/projects/midnight-payphone/high/10.jpg"></div>
                         </div>
                     </div>
-                </div>
+                </div>                
                 <div class="work">
                     <div class="main-image">
-                        <img src="img/projects/filmic-interior-closeups/1.jpg" loading="lazy" data-link="https://mpfcoelho.artstation.com/projects/yJnqXJ" onclick="openModalMainImage(this.parentElement)">
+                        <img src="img/projects/filmic-interior-closeups/low/1.jpg" loading="lazy" alt="" data-full="img/projects/filmic-interior-closeups/high/1.jpg" data-link="https://mpfcoelho.artstation.com/projects/yJnqXJ" onclick="openModalMainImage(this.parentElement)">
                         <a href="https://mpfcoelho.artstation.com/projects/yJnqXJ" target="_blank" class="work-title">FILMIC INTERIOR CLOSEUPS</a>
                         <div class="arrows">
                             <button class="prev-button" onclick="changeImage(-1)">❮</button>
                             <button class="next-button" onclick="changeImage(1)">❯</button>
                         </div>
                         <div class="thumbnails">
-                            <div class="thumbnail active" data-image="img/projects/filmic-interior-closeups/1.jpg"></div>
-                            <div class="thumbnail" data-image="img/projects/filmic-interior-closeups/2.jpg"></div>
-                            <div class="thumbnail" data-image="img/projects/filmic-interior-closeups/3.jpg"></div>
-                            <div class="thumbnail" data-image="img/projects/filmic-interior-closeups/4.jpg"></div>
-                            <div class="thumbnail" data-image="img/projects/filmic-interior-closeups/5.jpg"></div>
-                            <div class="thumbnail" data-image="img/projects/filmic-interior-closeups/6.jpg"></div>
-                            <div class="thumbnail" data-image="img/projects/filmic-interior-closeups/7.jpg"></div>
-                            <div class="thumbnail" data-image="img/projects/filmic-interior-closeups/8.jpg"></div>
-                            <div class="thumbnail" data-image="img/projects/filmic-interior-closeups/9.jpg"></div>
+                            <div class="thumbnail active" data-image="img/projects/filmic-interior-closeups/low/1.jpg" data-full="img/projects/filmic-interior-closeups/high/1.jpg"></div>
+                            <div class="thumbnail" data-image="img/projects/filmic-interior-closeups/low/2.jpg" data-full="img/projects/filmic-interior-closeups/high/2.jpg"></div>
+                            <div class="thumbnail" data-image="img/projects/filmic-interior-closeups/low/3.jpg" data-full="img/projects/filmic-interior-closeups/high/3.jpg"></div>
+                            <div class="thumbnail" data-image="img/projects/filmic-interior-closeups/low/4.jpg" data-full="img/projects/filmic-interior-closeups/high/4.jpg"></div>
+                            <div class="thumbnail" data-image="img/projects/filmic-interior-closeups/low/5.jpg" data-full="img/projects/filmic-interior-closeups/high/5.jpg"></div>
+                            <div class="thumbnail" data-image="img/projects/filmic-interior-closeups/low/6.jpg" data-full="img/projects/filmic-interior-closeups/high/6.jpg"></div>
+                            <div class="thumbnail" data-image="img/projects/filmic-interior-closeups/low/7.jpg" data-full="img/projects/filmic-interior-closeups/high/7.jpg"></div>
+                            <div class="thumbnail" data-image="img/projects/filmic-interior-closeups/low/8.jpg" data-full="img/projects/filmic-interior-closeups/high/8.jpg"></div>
+                            <div class="thumbnail" data-image="img/projects/filmic-interior-closeups/low/9.jpg" data-full="img/projects/filmic-interior-closeups/high/9.jpg"></div>
                         </div>
                     </div>
-                </div>
+                </div>                
                 <div class="work">
                     <div class="main-image">
-                        <img src="img/projects/sunshine-canyon-house/1.jpg" loading="lazy" data-link="https://mpfcoelho.artstation.com/projects/RnGqYD" onclick="openModalMainImage(this.parentElement)">
+                        <img src="img/projects/sunshine-canyon-house/low/1.jpg" loading="lazy" alt="" data-full="img/projects/sunshine-canyon-house/high/1.jpg" data-link="https://mpfcoelho.artstation.com/projects/RnGqYD" onclick="openModalMainImage(this.parentElement)">
                         <a href="https://mpfcoelho.artstation.com/projects/RnGqYD" target="_blank" class="work-title">SUNSHINE CANYON HOUSE - LIGHTING STUDY</a>
                         <div class="arrows">
                             <button class="prev-button" onclick="changeImage(-1)">❮</button>
                             <button class="next-button" onclick="changeImage(1)">❯</button>
                         </div>
                         <div class="thumbnails">
-                            <div class="thumbnail active" data-image="img/projects/sunshine-canyon-house/1.jpg"></div>
-                            <div class="thumbnail" data-image="img/projects/sunshine-canyon-house/2.jpg"></div>
-                            <div class="thumbnail" data-image="img/projects/sunshine-canyon-house/3.jpg"></div>
-                            <div class="thumbnail" data-image="img/projects/sunshine-canyon-house/4.jpg"></div>
-                            <div class="thumbnail" data-image="img/projects/sunshine-canyon-house/5.jpg"></div>
-                            <div class="thumbnail" data-image="img/projects/sunshine-canyon-house/6.jpg"></div>
+                            <div class="thumbnail active" data-image="img/projects/sunshine-canyon-house/low/1.jpg" data-full="img/projects/sunshine-canyon-house/high/1.jpg"></div>
+                            <div class="thumbnail" data-image="img/projects/sunshine-canyon-house/low/2.jpg" data-full="img/projects/sunshine-canyon-house/high/2.jpg"></div>
+                            <div class="thumbnail" data-image="img/projects/sunshine-canyon-house/low/3.jpg" data-full="img/projects/sunshine-canyon-house/high/3.jpg"></div>
+                            <div class="thumbnail" data-image="img/projects/sunshine-canyon-house/low/4.jpg" data-full="img/projects/sunshine-canyon-house/high/4.jpg"></div>
+                            <div class="thumbnail" data-image="img/projects/sunshine-canyon-house/low/5.jpg" data-full="img/projects/sunshine-canyon-house/high/5.jpg"></div>
+                            <div class="thumbnail" data-image="img/projects/sunshine-canyon-house/low/6.jpg" data-full="img/projects/sunshine-canyon-house/high/6.jpg"></div>
                         </div>
                     </div>
-                </div>
+                </div>                
                 <div class="work">
                     <div class="main-image">
-                        <img src="img/projects/classic-living/1.jpg" loading="lazy" data-link="https://mpfcoelho.artstation.com/projects/eJeXeX" onclick="openModalMainImage(this.parentElement)">
+                        <img src="img/projects/classic-living/low/1.jpg" loading="lazy" alt="" data-full="img/projects/classic-living/high/1.jpg" data-link="https://mpfcoelho.artstation.com/projects/eJeXeX" onclick="openModalMainImage(this.parentElement)">
                         <a href="https://mpfcoelho.artstation.com/projects/eJeXeX" target="_blank" class="work-title">CLASSIC LIVING</a>
                         <div class="arrows">
                             <button class="prev-button" onclick="changeImage(-1)">❮</button>
                             <button class="next-button" onclick="changeImage(1)">❯</button>
                         </div>
                         <div class="thumbnails">
-                            <div class="thumbnail active" data-image="img/projects/classic-living/1.jpg"></div>
-                            <div class="thumbnail" data-image="img/projects/classic-living/2.jpg"></div>
+                            <div class="thumbnail active" data-image="img/projects/classic-living/low/1.jpg" data-full="img/projects/classic-living/high/1.jpg"></div>
+                            <div class="thumbnail" data-image="img/projects/classic-living/low/2.jpg" data-full="img/projects/classic-living/high/2.jpg"></div>
                         </div>
                     </div>
-                </div>
+                </div>                
                 <div class="work">
                     <div class="main-image">
-                        <img src="img/projects/colored-nature/1.jpg" loading="lazy" data-link="https://mpfcoelho.artstation.com/projects/RnNG2X" onclick="openModalMainImage(this.parentElement)">
+                        <img src="img/projects/colored-nature/low/1.jpg" loading="lazy" alt="" data-full="img/projects/colored-nature/high/1.jpg" data-link="https://mpfcoelho.artstation.com/projects/RnNG2X" onclick="openModalMainImage(this.parentElement)">
                         <a href="https://mpfcoelho.artstation.com/projects/RnNG2X" target="_blank" class="work-title">COLORED NATURE</a>
                         <div class="arrows">
                             <button class="prev-button" onclick="changeImage(-1)">❮</button>
                             <button class="next-button" onclick="changeImage(1)">❯</button>
                         </div>
                         <div class="thumbnails">
-                            <div class="thumbnail active" data-image="img/projects/colored-nature/1.jpg"></div>
-                            <div class="thumbnail" data-image="img/projects/colored-nature/2.jpg"></div>
-                            <div class="thumbnail" data-image="img/projects/colored-nature/3.jpg"></div>
-                            <div class="thumbnail" data-image="img/projects/colored-nature/4.jpg"></div>
-                            <div class="thumbnail" data-image="img/projects/colored-nature/5.jpg"></div>
-                            <div class="thumbnail" data-image="img/projects/colored-nature/6.jpg"></div>
+                            <div class="thumbnail active" data-image="img/projects/colored-nature/low/1.jpg" data-full="img/projects/colored-nature/high/1.jpg"></div>
+                            <div class="thumbnail" data-image="img/projects/colored-nature/low/2.jpg" data-full="img/projects/colored-nature/high/2.jpg"></div>
+                            <div class="thumbnail" data-image="img/projects/colored-nature/low/3.jpg" data-full="img/projects/colored-nature/high/3.jpg"></div>
+                            <div class="thumbnail" data-image="img/projects/colored-nature/low/4.jpg" data-full="img/projects/colored-nature/high/4.jpg"></div>
+                            <div class="thumbnail" data-image="img/projects/colored-nature/low/5.jpg" data-full="img/projects/colored-nature/high/5.jpg"></div>
+                            <div class="thumbnail" data-image="img/projects/colored-nature/low/6.jpg" data-full="img/projects/colored-nature/high/6.jpg"></div>
                         </div>
                     </div>
-                </div>
+                </div>                
                 <div class="work">
                     <div class="main-image">
-                        <img src="img/projects/the-underground-temple/1.jpg" data-link="https://mpfcoelho.artstation.com/projects/LexEeR" onclick="openModalMainImage(this.parentElement)">
+                        <img src="img/projects/the-underground-temple/low/1.jpg" loading="lazy" alt="" data-full="img/projects/the-underground-temple/high/1.jpg" data-link="https://mpfcoelho.artstation.com/projects/LexEeR" onclick="openModalMainImage(this.parentElement)">
                         <a href="https://mpfcoelho.artstation.com/projects/LexEeR" target="_blank" class="work-title">THE UNDERGROUND TEMPLE</a>
                         <div class="arrows">
                             <button class="prev-button" onclick="changeImage(-1)">❮</button>
                             <button class="next-button" onclick="changeImage(1)">❯</button>
                         </div>
                         <div class="thumbnails">
-                            <div class="thumbnail active" data-image="img/projects/the-underground-temple/1.jpg"></div>
-                            <div class="thumbnail" data-image="img/projects/the-underground-temple/2.jpg"></div>
-                            <div class="thumbnail" data-image="img/projects/the-underground-temple/3.jpg"></div>
+                            <div class="thumbnail active" data-image="img/projects/the-underground-temple/low/1.jpg" data-full="img/projects/the-underground-temple/high/1.jpg"></div>
+                            <div class="thumbnail" data-image="img/projects/the-underground-temple/low/2.jpg" data-full="img/projects/the-underground-temple/high/2.jpg"></div>
+                            <div class="thumbnail" data-image="img/projects/the-underground-temple/low/3.jpg" data-full="img/projects/the-underground-temple/high/3.jpg"></div>
                         </div>
                     </div>
-                </div>
+                </div>                
             </article>
         </section>
         <section class="about-section" id="about-section">
@@ -571,7 +580,7 @@
                     </div>
                     <div class="about-text">
                         <p>Ever since I was young, I've been passionate about art and drawing. This passion led me to get a degree in architecture, where I discovered my love for 3D art. I became fascinated with it and dedicated myself to learning and refining my skills independently.</p>
-                        <p>Today, I'm a 3D Generalist Artist and Architect specializing in environment design and 3D visualization. My work involves lighting, texturing, animation, and post-production. I take pride in bringing creativity and precision to every project, turning ideas into immersive digital realities.</p>
+                        <p>Today, I'm a <strong>3D Generalist Artist</strong> and <strong>Architect</strong> specializing in environment design and 3D visualization. My work involves lighting, texturing, animation, and post-production. I take pride in bringing creativity and precision to every project, turning ideas into immersive digital realities.</p>
                         <p>I believe in the power of art to tell stories and inspire emotions. Thank you for visiting my portfolio. I hope you enjoy exploring my work as much as I enjoy creating it.</p>
                     </div>
                 </div>
@@ -660,14 +669,14 @@
                 <p><a href="mailto:mpfcoelho3d@gmail.com">mpfcoelho3d@gmail.com</a></p>
                 <br>
                 <p>Or simply write me a message here:</p>
-                <form action="https://formspree.io/f/myyrrbzz" method="POST">
+                <form id="contact-form">
                     <div class="form-group">
                         <label for="name">Name:</label>
-                        <input type="text" id="name" name="name" required>
+                        <input type="text" id="name" name="from_name" required>
                     </div>
                     <div class="form-group">
                         <label for="email">Email:</label>
-                        <input type="email" id="email" name="email" required>
+                        <input type="email" id="email" name="from_email" required>
                     </div>
                     <div class="form-group">
                         <label for="subject">Subject:</label>
@@ -677,17 +686,17 @@
                         <label for="message">Message:</label>
                         <textarea id="message" name="message" rows="5" required></textarea>
                     </div>
-                    <button type="submit" class="submit-btn">Send</button>
-                </form>
+                    <button type="submit" class="submit-btn">SEND</button>
+                </form>              
             </article>
         </section>
         <div id="myModal" class="modal">
             <div class="close" onclick="closeModal()">
                 <button class="close-button" onclick="closeModal()">&times;</button>
             </div>
-            <img class="modal-content" id="modalImg">
+            <img class="modal-content" alt="" id="modalImg">
             <div class="modal-footer">
-                <a href="#" target="_blank" id="artstationLink" style="display: none;">
+                <a href="#" target="_blank" id="artstationLink">
                     <img src="img/logos/artstation-logo.png" alt="ArtStation Logo" class="artstation-logo">
                     <span>View full project</span>
                 </a>

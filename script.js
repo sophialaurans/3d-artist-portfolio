@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
     setInterval(nextSlide, 7000); // Show a new image every 7 seconds
 
     const line = document.querySelector('.line');
+    const carousel = document.querySelector('.carousel');
     
     const observerLine = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
@@ -23,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 line.style.width = '0'; // Shrinks the line when it's out of the viewport
             }
         });
-    }, { threshold: [0, 1] });
+    }, { threshold: 0.1 });
     
     observerLine.observe(line);
 
@@ -31,11 +32,36 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('scroll', () => {
         const rect = line.getBoundingClientRect();
         const viewportHeight = window.innerHeight || document.documentElement.clientHeight;
-
-        if (rect.bottom <= viewportHeight - 40) {
-            line.style.width = '85vw'; // Expands the line to 85vw when the base is within 40px from the bottom of the viewport
+    
+        if (rect.bottom <= viewportHeight - 70) {
+            line.style.width = '85vw'; // Expands the line to 85vw when the base is within 70px from the bottom of the viewport
         } else {
-            line.style.width = '0'; // Shrinks the line when the base is outside the 40px range
+            line.style.width = '0'; // Shrinks the line when the base is outside the 70px range
+        }
+    
+        if (rect.top <= 0) {
+            carousel.style.visibility = 'hidden'; // Makes the carousel invisible when scrolling past the line
+        } else {
+            carousel.style.visibility = 'visible'; // Restores visibility when above the line
+        }
+
+        const imgContainers = document.querySelectorAll('.gallery-img-container');
+        const imgWorks = document.querySelectorAll('.work');
+
+        if (gallery.style.display == 'flex') {
+            imgContainers.forEach(function(imgContainer) {
+                const imgContainerRect = imgContainer.getBoundingClientRect();
+                if (imgContainerRect.top < viewportHeight - 100) { // Verifica se a parte superior da caixa está visível
+                    imgContainer.classList.add('visible'); // Adiciona a classe 'visible' para ativar a animação
+                }
+            });
+        } else {
+            imgWorks.forEach(function(imgWork) {
+                const imgWorkRect = imgWork.getBoundingClientRect();
+                if (imgWorkRect.top < viewportHeight - 100) { // Verifica se a parte superior da caixa está visível
+                    imgWork.classList.add('visible'); // Adiciona a classe 'visible' para ativar a animação
+                }
+            });
         }
     });
 
@@ -83,6 +109,15 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     
+    window.addEventListener('load', () => {
+        const portfolioSection = document.getElementById('portfolio-section');
+        const gallery = document.getElementById('gallery');
+        const projects = document.getElementById('projects');
+
+        // Define a altura com base na seção ativa
+        portfolioSection.style.height = gallery.style.display === 'flex' ? `${gallery.offsetHeight}px` : `${projects.offsetHeight}px`;
+    });
+    
     // Calls the function to show the Gallery section initially
     show('gallery');
 
@@ -98,7 +133,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const galleryImages = document.querySelectorAll(".gallery-img-container img");
     galleryImages.forEach(img => {
         img.addEventListener("click", function() {
-            openModalGallery(this);
+            // Pass the value of the data-full attribute to the openModalGallery function
+            const fullImageSrc = this.getAttribute("data-full");
+            openModalGallery(fullImageSrc);
         });
     });
 
@@ -119,11 +156,104 @@ document.addEventListener('DOMContentLoaded', function() {
             scrollTop: $(target).offset().top
         }, 1000); // 1 second scrolling time
     });
+
+    // Listen for keydown events to navigate images with arrow keys
+    document.addEventListener("keydown", function(event) {
+        if (event.key === "ArrowRight") {
+            navigateImages(1);
+        } else if (event.key === "ArrowLeft") {
+            navigateImages(-1);
+        }
+    });
+
+    let startX = 0; // Stores the initial touch position
+
+    // Detects the start of the touch
+    document.addEventListener("touchstart", function(event) {
+        startX = event.touches[0].clientX;
+    });
+    
+    // Detects the end of the touch and decides if it’s a swipe
+    document.addEventListener("touchend", function(event) {
+        const endX = event.changedTouches[0].clientX;
+        const distance = endX - startX;
+    
+        // Set a threshold to consider a swipe (in pixels)
+        const swipeThreshold = 50;
+    
+        if (Math.abs(distance) > swipeThreshold) {
+            // Swiped to the right
+            if (distance > 0) {
+                navigateImages(-1);
+            }
+            // Swiped to the left
+            else {
+                navigateImages(1);
+            }
+        }
+    });
+    
+    window.addEventListener('load', () => {
+        const portfolioSection = document.getElementById('portfolio-section');
+        const gallery = document.getElementById('gallery');
+        const projects = document.getElementById('projects');
+    
+        // Função para definir a altura com base na seção ativa
+        function ajustarAlturaPortfolio() {
+            portfolioSection.style.height = gallery.style.display === 'flex' 
+                ? `${gallery.offsetHeight}px` 
+                : `${projects.offsetHeight}px`;
+        }
+    
+        // Define a altura logo após o carregamento
+        ajustarAlturaPortfolio();
+    
+        // Reajusta a altura após um pequeno atraso para garantir que as imagens tenham carregado
+        setTimeout(ajustarAlturaPortfolio, 100);
+    });
+
+    document.getElementById("contact-form").addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevents the default form submission
+    
+        // Collect form fields
+        const from_name = document.getElementById("name").value;
+        const from_email = document.getElementById("email").value;
+        const subject = document.getElementById("subject").value;
+        const message = document.getElementById("message").value;
+
+        // Check if all fields are filled
+        if (!from_name || !from_email || !subject || !message) {
+            alert("Please fill in all fields.");
+            return; // Stop the form submission
+        }
+
+        // Collect form data
+        const templateParams = {
+            from_name: from_name,
+            from_email: from_email,
+            subject: subject,
+            message: message,
+        };
+    
+        // Sends the form data to EmailJS
+        emailjs.send("service_8it8ugc", "template_6nbool3", templateParams)
+            .then(function(response) {
+                alert("Message sent successfully!");
+                document.getElementById("contact-form").reset(); // Resets the form
+            }, function(error) {
+                alert("Failed to send message. Please try again.");
+                console.log("Error:", error);
+            });
+    });    
 });
 
-// Function that displays the specified section ('gallery' or 'projects') and adjusts the about section margin
+(function() {
+    emailjs.init("Se-FA0AtXrYVwKww_");
+})();
+
+// Function that displays the specified section ('gallery' or 'projects') and adjusts the portfolio section height
 function show(section) {
-    const aboutSection = document.getElementById('about-section');
+    const portfolioSection = document.getElementById('portfolio-section');
     const gallery = document.getElementById('gallery');
     const projects = document.getElementById('projects');
     const galleryButton = document.getElementById('gallery-switch-btn');
@@ -137,19 +267,14 @@ function show(section) {
             projects.style.display = 'none';
             galleryButton.style.color = 'white';
             projectsButton.style.color = '';
+            portfolioSection.style.height = `${gallery.offsetHeight}px`;
         } else if (section === 'projects') {
             gallery.style.display = 'none';
             projects.style.display = 'flex';
             projectsButton.style.color = 'white';
             galleryButton.style.color = '';
+            portfolioSection.style.height = `${projects.offsetHeight}px`;
         }
-
-        // Update about section margin based on the displayed section's height
-        requestAnimationFrame(() => {
-            let portfolioSectionHeight = section === 'gallery' ? gallery.offsetHeight : projects.offsetHeight;
-            let aboutSectionHeight = aboutSection.offsetHeight;
-            aboutSection.style.marginTop = `${portfolioSectionHeight}px`;
-        });
     }
 }
 
@@ -157,24 +282,27 @@ let currentImageIndex = 0;
 let images = [];
 
 // Function that opens a modal window for the gallery section, displaying the image bigger
-function openModalGallery(imgElement) {
+function openModalGallery(fullImageSrc) {
     const modal = document.getElementById("myModal");
     const modalImg = document.getElementById("modalImg");
     const artstationLink = document.getElementById("artstationLink");
 
-    // Display the modal and set the image src
-    modal.style.display = "block";
-    modalImg.src = imgElement.src;
+    const nav = document.querySelector('.navbar');
+    nav.style.zIndex = 0;
 
-    // Update the images array with all gallery images and set currentImageIndex to the clicked image
+    // Display the modal and set the image src to the full image
+    modal.style.display = "block";
+    modalImg.src = fullImageSrc;
+
+    // Update the images array with all gallery images and set currentImageIndex
     images = Array.from(document.querySelectorAll(".gallery-img-container img")).map(img => ({
-        src: img.src,
+        src: img.getAttribute("data-full"), // Use data-full for the full images
         link: img.getAttribute("data-link")
     }));
-    currentImageIndex = images.findIndex(image => image.src === imgElement.src);
+    currentImageIndex = images.findIndex(image => image.src === fullImageSrc);
 
     // Set the ArtStation link and adjust its display based on availability
-    const link = imgElement.getAttribute("data-link");
+    const link = images[currentImageIndex].link; // Get link from the images array
     artstationLink.href = link;
     artstationLink.style.display = link ? "inline-flex" : "none"; // Show link in gallery modal if it exists
 }
@@ -187,8 +315,9 @@ function openModalMainImage(parentWork) {
 
     // Display the modal and set the project's main image src
     modal.style.display = "block";
-    const imgElement = parentWork.querySelector(".main-image img");
-    modalImg.src = imgElement.src;
+    const imgElement = parentWork.querySelector(".thumbnail.active");
+    fullImageSrc = imgElement.getAttribute("data-full");
+    modalImg.src = fullImageSrc;
 
     // Set the ArtStation link from the main image and adjust display based on availability
     const link = imgElement.getAttribute("data-link");
@@ -198,26 +327,20 @@ function openModalMainImage(parentWork) {
      // Update the images array with project thumbnails and set currentImageIndex to the clicked image
     const thumbnails = parentWork.querySelectorAll(".thumbnails .thumbnail");
     images = Array.from(thumbnails).map(thumbnail => ({
-        src: thumbnail.getAttribute("data-image"),
+        src: thumbnail.getAttribute("data-full"),
         link: link // Use the same link for all thumbnails
     }));
-    currentImageIndex = Array.from(thumbnails).findIndex(thumbnail => thumbnail.getAttribute("data-image") === imgElement.src);
+    
+    currentImageIndex = Array.from(thumbnails).findIndex(thumbnail => thumbnail.getAttribute("data-full") === fullImageSrc);
 }
 
 // Function to close the modal
 function closeModal() {
     const modal = document.getElementById("myModal");
     modal.style.display = "none"; // Hide the modal when called
+    const nav = document.querySelector('.navbar');
+    nav.style.zIndex = 1;
 }
-
-// Listen for keydown events to navigate images with arrow keys
-document.addEventListener("keydown", function(event) {
-    if (event.key === "ArrowRight") {
-        navigateImages(1);
-    } else if (event.key === "ArrowLeft") {
-        navigateImages(-1);
-    }
-});
 
 // Function to navigate through images in the modal
 function navigateImages(direction) {
