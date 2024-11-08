@@ -2,6 +2,8 @@
 
 Welcome to the portfolio of Marcos Paulo Coelho, a talented 3D artist. This website showcases his work and provides a platform for potential clients and employers to view his portfolio. The site is built using HTML, CSS, and JavaScript.
 
+**[View the Portfolio](https://sophialaurans.github.io/3d-artist-portfolio/)**
+
 ## Table of Contents
 
 - [About](#about)
