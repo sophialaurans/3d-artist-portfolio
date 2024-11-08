@@ -287,7 +287,10 @@ function openModalGallery(fullImageSrc) {
     const modalImg = document.getElementById("modalImg");
     const artstationLink = document.getElementById("artstationLink");
 
-    const nav = document.querySelector('.navbar');
+    const body = document.querySelector("body");
+    body.style.overflow = "hidden";
+
+    const nav = document.querySelector(".navbar");
     nav.style.zIndex = 0;
 
     // Display the modal and set the image src to the full image
@@ -312,15 +315,22 @@ function openModalMainImage(parentWork) {
     const modal = document.getElementById("myModal");
     const modalImg = document.getElementById("modalImg");
     const artstationLink = document.getElementById("artstationLink");
+    const mainImageImg = parentWork.querySelector(".main-image img");
+
+    const body = document.querySelector("body");
+    body.style.overflow = "hidden";
+
+    const nav = document.querySelector('.navbar');
+    nav.style.zIndex = 0;
 
     // Display the modal and set the project's main image src
     modal.style.display = "block";
     const imgElement = parentWork.querySelector(".thumbnail.active");
-    fullImageSrc = imgElement.getAttribute("data-full");
+    const fullImageSrc = imgElement.getAttribute("data-full");
     modalImg.src = fullImageSrc;
 
     // Set the ArtStation link from the main image and adjust display based on availability
-    const link = imgElement.getAttribute("data-link");
+    const link = mainImageImg.getAttribute("data-link");
     artstationLink.href = link;
     artstationLink.style.display = link ? "inline-flex" : "none"; // Show link in project modal if available
 
@@ -340,6 +350,8 @@ function closeModal() {
     modal.style.display = "none"; // Hide the modal when called
     const nav = document.querySelector('.navbar');
     nav.style.zIndex = 1;
+    const body = document.querySelector("body");
+    body.style.overflow = "visible";
 }
 
 // Function to navigate through images in the modal
