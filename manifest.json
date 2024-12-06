@@ -1,0 +1,21 @@
+{
+  "name": "3D Artist - Marcos Paulo Coelho",
+  "short_name": "Marcos Paulo Coelho",
+  "description": "Portfolio of Marcos Paulo Coelho, a 3D artist and CGI illustrator experienced in concept art, environment design, and architectural visualization (archviz).",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#000000",
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
