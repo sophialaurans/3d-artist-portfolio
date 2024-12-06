@@ -45,7 +45,7 @@ body {
 }
 
 .initial {
-    height: 100vh;
+    height: 90vh;
     overflow: hidden;
     position: sticky;
 }
@@ -125,7 +125,7 @@ body {
 .header-arrows a {
     position: absolute;
     z-index: 1;
-    top: 97%;
+    top: 96%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
