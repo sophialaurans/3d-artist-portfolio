@@ -244,7 +244,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 alert("Failed to send message. Please try again.");
                 console.log("Error:", error);
             });
-    });    
+    });
+
+    document.getElementById("year").textContent = new Date().getFullYear();
 });
 
 (function() {
