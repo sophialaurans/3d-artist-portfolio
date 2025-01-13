@@ -1,4 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
+
+    document.getElementById("year").textContent = new Date().getFullYear();
+    
     // Define the image sequence in the carousel
     let currentSlide = 0;
     const slides = document.querySelectorAll('.carousel img');
@@ -245,8 +248,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 console.log("Error:", error);
             });
     });
-
-    document.getElementById("year").textContent = new Date().getFullYear();
 });
 
 (function() {
